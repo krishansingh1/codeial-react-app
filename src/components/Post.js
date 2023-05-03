@@ -21,6 +21,7 @@ const Post = ({ post }) => {
 
             if (response.success) {
                 setComment('');
+                console.log(creatingComment);
                 posts.addComment(response.data.comment, post._id);
                 addToast("Comment added successfully!", {
                     appearance: 'success',
